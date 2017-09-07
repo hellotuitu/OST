@@ -1,0 +1,15 @@
+---- ROOT_DEV Matches (14 in 5 files) ----
+Config.h (include\linux): * root-device by changing the line ROOT_DEV = XXX in boot/bootsect.s
+Fs.h (include\linux):extern int ROOT_DEV;
+Main.c (init): 	ROOT_DEV = ORIG_ROOT_DEV;
+Ramdisk.c (kernel\blk_drv):	if (MAJOR(ROOT_DEV) != 2)
+Ramdisk.c (kernel\blk_drv):	bh = breada(ROOT_DEV,block+1,block,block+2,-1);
+Ramdisk.c (kernel\blk_drv):			bh = breada(ROOT_DEV, block, block+1, block+2, -1);
+Ramdisk.c (kernel\blk_drv):			bh = bread(ROOT_DEV, block);
+Ramdisk.c (kernel\blk_drv):	ROOT_DEV=0x0101;
+Super.c (fs):int ROOT_DEV = 0;
+Super.c (fs):	if (dev == ROOT_DEV) {
+Super.c (fs):	if (dev==ROOT_DEV)
+Super.c (fs):	if (MAJOR(ROOT_DEV) == 2) {
+Super.c (fs):	if (!(p=read_super(ROOT_DEV)))
+Super.c (fs):	if (!(mi=iget(ROOT_DEV,ROOT_INO)))

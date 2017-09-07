@@ -1,0 +1,18 @@
+#include "../../include/init/int_handler.h"
+
+// ---------------------------------------------
+
+// 常规irq处理
+// note: 该模块未加入makefile！
+
+// 该模块导出：
+//  spurious_handler
+
+// 该模块导入：
+//  无
+
+// -------------------------------------------
+void spurious_handler(){
+  printf("This irq don't have a handler!");
+  halt();
+}
